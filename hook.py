@@ -90,7 +90,7 @@ def handle_webhook(request):
     # Store the payment event in Firestore
     try:
         payment_event_ref = db.collection('payment_events').document()
-        payment_event_ref.set(subscription_data)
+        payment_event_ref.set(event_data)
         logging.info(f"Stored payment event: {subscription_data}")
     except Exception as e:
         logging.error(f"Error storing payment event in Firestore: {str(e)}")
