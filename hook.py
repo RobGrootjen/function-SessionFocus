@@ -40,7 +40,7 @@ def handle_webhook(request):
     print(f"Event type received: {event_type}")
 
     # Process the event based on its type
-    if event_type == "subscription_activated" or event_type == "subscription_payment_succeeded"
+    if event_type == "subscription_activated" or event_type == "subscription_payment_succeeded":
         # The correct path to subscription_external_id
         subscription_data = event_data.get('data', {}).get('data', {})
         print(f"Data field content: {subscription_data}")
